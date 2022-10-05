@@ -9,19 +9,7 @@
     "watch": "nodemon server.js",
     "seed": "node seeds/index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/priyaravi23/orm-e-commerce.git"
-  },
-  "author": "Priya",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/priyaravi23/orm-e-commerce/issues"
-  },
-  "homepage": "https://github.com/priyaravi23/orm-e-commerce#readme",
-  "devDependencies": {
-    "nodemon": "^2.0.4"
-  },
+  {
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
