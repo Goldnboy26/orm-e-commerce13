@@ -4,33 +4,6 @@
 
 *Build the back end for an e-commerce site. Take a working Express.js API and configure it to use Sequelize to interact with a MySQL database.*
 
-
-### App Demo
-
-- Create Schema and Seed data
-
-![](images/demo-6.gif)
-
-- GET routes to return all categories, all products
-
-![](images/demo-1.gif)
-
-- GET routes to return a single category, a single product, and a single tag
-
-![](images/demo-2.gif)
-
-- POST, PUT, and DELETE routes for categories
-
-![](images/demo-3.gif)
-
-- POST, PUT, and DELETE routes for Tags
-
-![](images/demo-4.gif)
-
-- POST, PUT, and DELETE routes for products
-
-![](images/demo-5.gif)
-
 ### User Story
 
 ```text
@@ -55,92 +28,27 @@ WHEN I test API POST, PUT, and DELETE routes in Insomnia
 THEN I am able to successfully create, update, and delete data in my database
 ```
 
-### Database Models
 
-- `Category`
 
-    - `id`
-        - Integer
-        - Doesn't allow null values
-        - Set as primary key
-        - Uses auto increment
+- Create Schema and Seed data
 
-    - `category_name`
-        - String
-        - Doesn't allow null values
+- GET routes to return all categories, all products
 
-- `Product`
+- GET routes to return a single category, a single product, and a single tag
 
-    - `id`
-        - Integer
-        - Doesn't allow null values
-        - Set as primary key
-        - Uses auto increment
+- POST, PUT, and DELETE routes for categories
 
-    - `product_name`
-        - String
-        - Doesn't allow null values
+- POST, PUT, and DELETE routes for Tags
 
-    - `price`
-        - Decimal
-        - Doesn't allow null values
-        - Validates that the value is a decimal
+- POST, PUT, and DELETE routes for products
 
-    - `stock`
-        - Integer
-        - Doesn't allow null values
-        - Set a default value of 10
-        - Validates that the value is numeric
+- https://drive.google.com/file/d/1ZIlAXXAvAt5u15Km1tfhs5u2Tw79WHAM/view 
 
-    - `category_id`
-        - Integer
-        - References the category model's id
-
-- `Tag`
-
-    - `id`
-        - Integer
-        - Doesn't allow null values
-        - Set as primary key
-        - Uses auto increment
-
-    - `tag_name`
-        - String
-
-- `ProductTag`
-
-    - `id`
-        - Integer
-        - Doesn't allow null values
-        - Set as primary key
-        - Uses auto increment
-
-    - `product_id`
-        - Integer
-        - References the product model's id
-
-    - `tag_id`
-        - Integer
-        - References the tag model's id
-
-### Associations
-
-*You'll need to execute association methods on your Sequelize models to create the following relationships between them:*
-
-- Product belongs to Category, as a category can have multiple products but a product can only belong to one category.
-
-- Category has many Product models.
-
-- Product belongs to many Tag models. Using the ProductTag through model, allow products to have multiple tags and tags to have many products.
-
-- Tag belongs to many Product models.
-
-### Instructions on how to run the app
 
 - Add a .env file to the root of the app with the following details
 
 ```text
 DB_NAME='ecommerce_db'
 DB_USER='root'
-DB_PW='xxx'
+DB_PW='(yourpassword)'
 ```
